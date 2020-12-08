@@ -88,4 +88,6 @@ mkdir /root/.config/terminator
 cp /root/kali-hydration/terminator_config /root/.config/terminator/config
 
 # ----- Set Wallpaper -----
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /root/wallpaper.jpg
+# See this link on how to find the property being changed when you set a wallpaper. Tweak the command below as necessary!
+# https://unix.stackexchange.com/questions/596070/how-to-change-wallpaper-on-xfce-from-terminal
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /root/kali-hydration/wallpaper.jpg
