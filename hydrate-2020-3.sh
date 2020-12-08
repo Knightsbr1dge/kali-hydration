@@ -88,4 +88,4 @@ mkdir /root/.config/terminator
 cp /root/kali-hydration/terminator_config /root/.config/terminator/config
 
 # ----- Set Wallpaper -----
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /root/wallpaper.jpg
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /root/kali-hydration/wallpaper.jpg
