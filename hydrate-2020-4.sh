@@ -29,7 +29,7 @@ cd /root;
 if [[ -f "/root/.zshrc_BAK" ]]
 then
     echo ".zshrc already configured. Skipping..."
-else mv /root/.zshrc /root/.zshrc_BAK && cp /root/zshrc_configured /root/.zshrc
+else mv /root/.zshrc /root/.zshrc_BAK && cp /root/kali-hydration/zshrc_configured /root/.zshrc
 fi
 
 # ----- Install packages -----
