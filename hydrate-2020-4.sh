@@ -1,4 +1,5 @@
-# Hydrate Kali with my personal preferences and pentest reposhttps://github.com/Knightsbr1dge/kali-hydration/blob/main/hydrate.sh
+#!/bin/bash
+# Hydrate Kali with my personal preferences and pentest repos
 
 # ----- Set up directories -----
 if [[ -d "/usr/bin/HackRepo" ]]
@@ -83,7 +84,8 @@ cd lolcat-master/bin;
 gem install lolcat;
 
 # ----- Copy Terminator Config -----
-cp /root/terminator_config /root/.config/terminator/config
+mkdir /root/.config/terminator
+cp /root/kali-hydration/terminator_config /root/.config/terminator/config
 
 # ----- Set Wallpaper -----
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /root/wallpaper.jpg
