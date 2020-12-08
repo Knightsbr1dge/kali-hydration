@@ -26,10 +26,10 @@ fi
 
 # ----- Configure .bashrc profile -----
 cd /root;
-if [[ -f "/root/.bashrc_BAK" ]]
+if [[ -f "/root/.zshrc_BAK" ]]
 then
-    echo ".bashrc already configured. Skipping..."
-else mv /root/.bashrc /root/.bashrc_BAK && cp /root/bashrc_configured /root/.bashrc
+    echo ".zshrc already configured. Skipping..."
+else mv /root/.zshrc /root/.zshrc_BAK && cp /root/zshrc_configured /root/.zshrc
 fi
 
 # ----- Install packages -----
