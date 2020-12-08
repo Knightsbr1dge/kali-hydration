@@ -1,4 +1,4 @@
-# Hydrate Kali with my personal preferences and pentest repos
+# Hydrate Kali with my personal preferences and pentest reposhttps://github.com/Knightsbr1dge/kali-hydration/blob/main/hydrate.sh
 
 # ----- Set up directories -----
 if [[ -d "/usr/bin/HackRepo" ]]
