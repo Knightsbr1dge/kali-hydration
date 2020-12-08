@@ -1,3 +1,4 @@
+#!/bin/bash
 # Hydrate Kali with my personal preferences and pentest repos
 
 # ----- Set up directories -----
