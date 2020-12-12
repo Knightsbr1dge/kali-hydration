@@ -17,7 +17,7 @@
     foreground_color = "#eeeeec"
     scrollback_lines = 5000
     scrollback_infinite = True
-    palette = "#000000:#cd0000:#00e6ff:#cdcd00:#7fff00:#cd00cd:#00e6ff:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
+    palette = "#000000:#cd0000:#00e6ff:#cdcd00:#008dff:#cd00cd:#00e6ff:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#0000ff:#ff00ff:#00ffff:#ffffff"
     copy_on_selection = True
 [layouts]
   [[default]]
