@@ -1,4 +1,3 @@
-#!/bin/bash
 # Hydrate Kali with my personal preferences and pentest repos
 
 # ----- Set up directories -----
@@ -23,8 +22,7 @@ else
 mkdir /usr/bin/pip;
 fi
 
-
-# ----- Configure .bashrc profile -----
+# ----- Configure .zshrc profile -----
 cd /root;
 if [[ -f "/root/.zshrc_BAK" ]]
 then
@@ -32,8 +30,11 @@ then
 else mv /root/.zshrc /root/.zshrc_BAK && cp /root/kali-hydration/zshrc_configured /root/.zshrc
 fi
 
-# ----- Install packages -----
+# ----- Install packages and update/upgrade-----
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 apt-get update && apt-get upgrade -y
+apt-get install atom -y
 apt-get install mingw-w64 -y
 apt-get install pure-ftpd -y
 apt-get install shellter -y
@@ -57,6 +58,17 @@ git clone https://github.com/huntergregal/mimipenguin.git;
 git clone https://github.com/DominicBreuker/pspy.git;
 git clone https://github.com/OWASP/joomscan.git;
 git clone https://github.com/CoreSecurity/impacket.git;
+
+# ----- Set up Atom config -----
+cp /root/kali-hydration/config.cson /root/.atom/config.cson;
+
+# ----- Setup bad characters txt file in /usr/bin/HackRepo
+cd /usr/bin/HackRepo;
+if [[ -f "/usr/bin/HackRepo/badchars.txt" ]]
+then
+    echo "badchars.txt already exists. Skipping..."
+else cp /root/kali-hydration/badchars.txt /usr/bin/HackRepo/badchars.txt
+fi
 
 # ----- Set executable permissions on git repos -----
 chmod +x /usr/bin/HackRepo/nmapAutomator/nmapAutomator.sh
