@@ -1,0 +1,12 @@
+"*":
+  core:
+    audioBeep: false
+    automaticallyUpdate: false
+    disabledPackages: [
+      "wrap-guide"
+    ]
+    telemetryConsent: "no"
+  "exception-reporting":
+    userId: "b1e6df6d-77e5-434a-9e31-6b8e91f64b3b"
+  welcome:
+    showOnStartup: false
