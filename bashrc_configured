@@ -24,4 +24,3 @@ alias nessus-start='/etc/init.d/nessusd start'
 alias nessus-stop='/etc/init.d/nessusd stop'
 alias nessus-update='/opt/nessus/sbin/nessuscli update --all'
 alias badchars='cat /usr/bin/HackRepo/badchars.txt'
-
