@@ -32,10 +32,7 @@ else mv /root/.zshrc /root/.zshrc_BAK && cp /root/kali-hydration/zshrc_configure
 fi
 
 # ----- Install packages and update/upgrade-----
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 apt-get update && apt-get upgrade -y
-apt-get install atom -y
 apt-get install mingw-w64 -y
 apt-get install pure-ftpd -y
 apt-get install shellter -y
@@ -43,6 +40,9 @@ apt-get install rinetd -y
 apt-get install gcc-9-base libgcc-9-dev libc6-dev -y
 apt-get install terminator -y
 apt-get install seclists -y
+apt-get install steghide -y
+apt-get install stegcracker -y
+apt-get install rlwrap -y
 apt-get update && apt-get upgrade -y
 
 # ----- Tidy up -----
@@ -60,9 +60,6 @@ git clone https://github.com/DominicBreuker/pspy.git;
 git clone https://github.com/OWASP/joomscan.git;
 git clone https://github.com/CoreSecurity/impacket.git;
 
-# ----- Set up Atom config -----
-cp /root/kali-hydration/config.cson /root/.atom/config.cson;
-
 # ----- Setup bad characters txt file in /usr/bin/HackRepo
 cd /usr/bin/HackRepo;
 if [[ -f "/usr/bin/HackRepo/badchars.txt" ]]
@@ -77,11 +74,16 @@ chmod +x /usr/bin/HackRepo/nmapAutomator/nmapAutomator.sh
 # ----- Set up Pip Installer -----
 cd /usr/bin/pip;
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py;
-python get-pip.py;
+python3 get-pip.py;
 
 # ----- Pip Install Respositories -----
 pip install pycryptodome;
 
+# ---- Install Impacket ----
+cd /usr/bin/HackRepo/impacket;
+pip3 install .;
+python3 setup.py install;
+s
 # ----- Set up Lolcat -----
 if [[ -d "/usr/bin/lolcat" ]]
 then
