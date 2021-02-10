@@ -59,6 +59,7 @@ git clone https://github.com/huntergregal/mimipenguin.git;
 git clone https://github.com/DominicBreuker/pspy.git;
 git clone https://github.com/OWASP/joomscan.git;
 git clone https://github.com/CoreSecurity/impacket.git;
+git clone https://github.com/maurosoria/dirsearch.git;
 
 # ----- Setup bad characters txt file in /usr/bin/HackRepo
 cd /usr/bin/HackRepo;
@@ -83,7 +84,11 @@ pip install pycryptodome;
 cd /usr/bin/HackRepo/impacket;
 pip3 install .;
 python3 setup.py install;
-s
+
+# ---- Install Dirsearch Requirements ----
+cd /usr/bin/HackRepo/dirsearcher;
+pip3 install -r requirements.txt;
+
 # ----- Set up Lolcat -----
 if [[ -d "/usr/bin/lolcat" ]]
 then
