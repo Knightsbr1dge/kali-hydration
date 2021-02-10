@@ -173,7 +173,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias nessus-stop='/etc/init.d/nessusd stop'
     alias nessus-update='/opt/nessus/sbin/nessuscli update --all'
     alias badchars='cat /usr/bin/HackRepo/baschars.txt'	
-    alias dirsearch='python3 /usr/bin/HackRepo/dirsearch.py'
+    alias dirsearch='python3 /usr/bin/HackRepo/dirsearch/dirsearch.py'
 
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
