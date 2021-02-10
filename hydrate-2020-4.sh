@@ -23,14 +23,6 @@ else
 mkdir /usr/bin/pip;
 fi
 
-# ----- Configure .zshrc profile -----
-cd /root;
-if [[ -f "/root/.zshrc_BAK" ]]
-then
-    echo ".zshrc already configured. Skipping..."
-else mv /root/.zshrc /root/.zshrc_BAK && cp /root/kali-hydration/zshrc_configured /root/.zshrc
-fi
-
 # ----- Install packages and update/upgrade-----
 apt-get update && apt-get upgrade -y
 apt-get install mingw-w64 -y
@@ -60,8 +52,17 @@ git clone https://github.com/DominicBreuker/pspy.git;
 git clone https://github.com/OWASP/joomscan.git;
 git clone https://github.com/CoreSecurity/impacket.git;
 git clone https://github.com/maurosoria/dirsearch.git;
+git clone https://github.com/jondonas/linux-exploit-suggester-2.git;
+git clone https://github.com/TsukiCTF/Lovely-Potato.git;
+git clone https://github.com/worawit/MS17-010.git;
+git clone https://github.com/Sysinternals/sysinternals.git;
+git clone https://github.com/codingo/Reconnoitre.git;
 
-# ----- Setup bad characters txt file in /usr/bin/HackRepo
+# ----- Setup bad Reconnoitre ----
+cd /usr/bin/HackRepo/Reconnoitre/;
+python3 setup.py install;
+
+# ----- Setup bad characters txt file in /usr/bin/HackRepo ----
 cd /usr/bin/HackRepo;
 if [[ -f "/usr/bin/HackRepo/badchars.txt" ]]
 then
@@ -106,6 +107,14 @@ gem install lolcat;
 # ----- Copy Terminator Config -----
 mkdir /root/.config/terminator
 cp /root/kali-hydration/terminator_config /root/.config/terminator/config
+
+# ----- Configure .zshrc profile -----
+cd /root;
+if [[ -f "/root/.zshrc_BAK" ]]
+then
+    echo ".zshrc already configured. Skipping..."
+else mv /root/.zshrc /root/.zshrc_BAK && cp /root/kali-hydration/zshrc_configured /root/.zshrc
+fi
 
 # ----- Set Wallpaper -----
 # See this link on how to find the property being changed when you set a wallpaper. Tweak the command below as necessary!
