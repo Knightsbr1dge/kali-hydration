@@ -6,4 +6,4 @@ This is an on-going build and will be updated and tweaked as time goes on.
 
 Feel free to use this as a base and tweak it to your own prefrences/liking.
 
-This requires Kali 2020.4
+This requires Kali 2021.X
