@@ -35,6 +35,7 @@ apt-get install seclists -y
 apt-get install steghide -y
 apt-get install stegcracker -y
 apt-get install rlwrap -y
+apt-get install bloodhound neo4j -y
 apt-get update && apt-get upgrade -y
 
 # ----- Tidy up -----
