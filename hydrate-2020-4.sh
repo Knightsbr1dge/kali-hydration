@@ -64,6 +64,13 @@ git clone https://github.com/ropnop/kerbrute.git;
 cd /usr/bin/HackRepo/Reconnoitre/;
 python3 setup.py install;
 
+# ----- Setup stegseek ----
+cd /usr/bin/HackRepo/;
+mkdir stegseek;
+cd stegseek/;
+wget https://github.com/RickdeJager/stegseek/releases/download/v0.5/stegseek_0.5-1.deb;
+apt install ./stegseek_0.5-1.deb;
+
 # ----- Setup bad characters txt file in /usr/bin/HackRepo ----
 cd /usr/bin/HackRepo;
 if [[ -f "/usr/bin/HackRepo/badchars.txt" ]]
