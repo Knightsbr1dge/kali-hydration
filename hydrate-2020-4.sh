@@ -59,7 +59,7 @@ git clone https://github.com/worawit/MS17-010.git;
 git clone https://github.com/Sysinternals/sysinternals.git;
 git clone https://github.com/codingo/Reconnoitre.git;
 git clone https://github.com/ropnop/kerbrute.git;
-hit clone https://github.com/ivan-sincek/php-reverse-shell.git;
+git clone https://github.com/ivan-sincek/php-reverse-shell.git;
 
 # ----- Setup bad Reconnoitre ----
 cd /usr/bin/HackRepo/Reconnoitre/;
