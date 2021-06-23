@@ -60,6 +60,7 @@ git clone https://github.com/Sysinternals/sysinternals.git;
 git clone https://github.com/codingo/Reconnoitre.git;
 git clone https://github.com/ropnop/kerbrute.git;
 git clone https://github.com/ivan-sincek/php-reverse-shell.git;
+git clone https://github.com/OJ/gobuster.git;
 
 # ----- Setup bad Reconnoitre ----
 cd /usr/bin/HackRepo/Reconnoitre/;
